@@ -245,6 +245,8 @@ tabela
 ##
 
 ![](forest_categoricas.png)
+
+
 #  Perfil dos grupos: {.section-background}
 
 ## Como os grupos se comportam?
