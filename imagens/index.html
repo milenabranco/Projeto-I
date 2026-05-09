@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Milena Labre (milenalabre@id.uff.br)">
+  <meta name="dcterms.date" content="2026-11-05">
+  <title>PROJETO I</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link rel="stylesheet" href="custom.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="capa2.png" data-background-size="co" class="quarto-title-block center">
+  <h1 class="title"><strong>PROJETO I</strong></h1>
+  <p class="subtitle"><strong>Prática Estatística II</strong></p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@id.uff.br</a>) 
+</div>
+        <p class="quarto-title-affiliation">
+            Universidade Federal Fluminense
+          </p>
+    </div>
+</div>
+
+  <p class="date">11/05/2026</p>
+</section>
+<section>
+<section id="introdução" class="title-slide slide level1 section-background center">
+<h1>1. Introdução:</h1>
+
+</section>
+<section id="contextualização" class="slide level2">
+<h2>1.1 <strong>Contextualização:</strong></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="box-blue">
+<ul>
+<li>A pandemia da <strong>COVID-19</strong> gerou mudanças sociais, econômicas e comportamentais</li>
+<li>Impacto direto nos hábitos e padrões de consumo</li>
+</ul>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:40%;">
+<div class="box-yellow">
+<p><strong>Problema de pesquisa:</strong></p>
+<ul>
+<li>Quais fatores estão associados às mudanças no consumo de bebidas alcoólicas durante a pandemia?</li>
+</ul>
+</div>
+</div></div>
+<div class="box-gray">
+<p><strong>Objetivo:</strong></p>
+<ul>
+<li>Avaliar a associação entre a variável <strong>Bebidas_Alcoolicas</strong> e as variáveis explicativas.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="metodologia" class="title-slide slide level1 section-background center">
+<h1>2. Metodologia:</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="box-yellow">
+<p><strong>Base do Estudo</strong></p>
+<ul>
+<li>Questionário online (2022)<br>
+</li>
+<li><strong>2310 indivíduos</strong></li>
+</ul>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="box-blue">
+<p><strong>Variável resposta (desfecho):</strong></p>
+<ul>
+<li><p><strong>Bebidas_Alcoolicas:</strong></p></li>
+<li><p>Variável categórica nominal com quatro categorias:</p>
+<ul>
+<li>Aumentou, Diminuiu, Não alterou, Não consumo.</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+<p><strong>Variáveis Explicativas</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Variáveis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Categóricas</td>
+<td>Sociodemográficas, econômicas, comportamentais</td>
+</tr>
+<tr class="even">
+<td>Contínuas</td>
+<td>Idade, altura, peso, IMC</td>
+</tr>
+<tr class="odd">
+<td>Aberta</td>
+<td>Sentimentos</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="métodos-estatísticos-α-5" class="slide level2">
+<h2><strong>Métodos estatísticos (α = 5%)</strong></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="box-blue">
+<p><strong>Variáveis categóricas</strong></p>
+<ul>
+<li>Qui-quadrado de independência<br>
+</li>
+<li>V de Cramér → intensidade<br>
+</li>
+<li>Resíduos padronizados → caselas influentes</li>
+</ul>
+<p><strong>Condição:</strong> frequências esperadas adequadas</p>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="box-yellow">
+<p><strong>Variáveis contínuas — médias entre grupos</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Método</th>
+<th>Quando usar</th>
+<th>Pós-teste</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ANOVA</td>
+<td>Variâncias homogêneas</td>
+<td>Tukey</td>
+</tr>
+<tr class="even">
+<td>Welch</td>
+<td>Variâncias heterogêneas</td>
+<td>Games-Howell</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pressupostos</strong></p>
+<ul>
+<li>Normalidade: densidade + QQ-plot<br>
+</li>
+<li>Homogeneidade: Levene e Bartlett</li>
+</ul>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="resultados" class="title-slide slide level1 section-background center">
+<h1>Resultados</h1>
+
+</section>
+<section id="tabela-qualitativa" class="slide level2 scrollable">
+<h2>Tabela qualitativa:</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fszixyjniy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fszixyjniy table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fszixyjniy thead, #fszixyjniy tbody, #fszixyjniy tfoot, #fszixyjniy tr, #fszixyjniy td, #fszixyjniy th {
+  border-style: none;
+}
+
+#fszixyjniy p {
+  margin: 0;
+  padding: 0;
+}
+
+#fszixyjniy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fszixyjniy .gt_title {
+  color: #333333;
+  font-size: 26px;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fszixyjniy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fszixyjniy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fszixyjniy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fszixyjniy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fszixyjniy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fszixyjniy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fszixyjniy .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fszixyjniy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fszixyjniy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fszixyjniy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fszixyjniy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fszixyjniy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fszixyjniy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fszixyjniy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fszixyjniy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fszixyjniy .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fszixyjniy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fszixyjniy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fszixyjniy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fszixyjniy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fszixyjniy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fszixyjniy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fszixyjniy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fszixyjniy .gt_left {
+  text-align: left;
+}
+
+#fszixyjniy .gt_center {
+  text-align: center;
+}
+
+#fszixyjniy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fszixyjniy .gt_font_normal {
+  font-weight: normal;
+}
+
+#fszixyjniy .gt_font_bold {
+  font-weight: bold;
+}
+
+#fszixyjniy .gt_font_italic {
+  font-style: italic;
+}
+
+#fszixyjniy .gt_super {
+  font-size: 65%;
+}
+
+#fszixyjniy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fszixyjniy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fszixyjniy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fszixyjniy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fszixyjniy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fszixyjniy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fszixyjniy .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fszixyjniy .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fszixyjniy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings gt_spanner_row header">
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Variáveis</strong></th>
+<th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+<strong>Consumo de Bebidas Alcoólicas</strong>
+</div></th>
+<th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
+<th rowspan="2" id="a**Cramér**" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Cramér</strong></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Aumentou</strong><br>607 (26%)</th>
+<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Diminuiu</strong><br>442 (19%)</th>
+<th id="stat_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>612 (26%)</th>
+<th id="stat_4" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não consumo</strong><br>649 (28%)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Gênero<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value">0,458</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,034</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Feminino</td>
+<td class="gt_row gt_center" headers="stat_1">463 (27%)</td>
+<td class="gt_row gt_center" headers="stat_2">325 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">450 (26%)</td>
+<td class="gt_row gt_center" headers="stat_4">497 (29%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Masculino</td>
+<td class="gt_row gt_center" headers="stat_1">144 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">117 (20%)</td>
+<td class="gt_row gt_center" headers="stat_3">162 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4">152 (26%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Raça/Cor<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value">0,179</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,043</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Outros</td>
+<td class="gt_row gt_center" headers="stat_1">9 (20%)</td>
+<td class="gt_row gt_center" headers="stat_2">8 (18%)</td>
+<td class="gt_row gt_center" headers="stat_3">10 (23%)</td>
+<td class="gt_row gt_center" headers="stat_4">17 (39%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Branca</td>
+<td class="gt_row gt_center" headers="stat_1">401 (28%)</td>
+<td class="gt_row gt_center" headers="stat_2">276 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">402 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4">377 (26%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Parda</td>
+<td class="gt_row gt_center" headers="stat_1">154 (24%)</td>
+<td class="gt_row gt_center" headers="stat_2">122 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">159 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4">203 (32%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Preta</td>
+<td class="gt_row gt_center" headers="stat_1">43 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">36 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3">41 (24%)</td>
+<td class="gt_row gt_center" headers="stat_4">52 (30%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Região<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,034</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,057</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Centro-oeste</td>
+<td class="gt_row gt_center" headers="stat_1">49 (23%)</td>
+<td class="gt_row gt_center" headers="stat_2">41 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">66 (30%)</td>
+<td class="gt_row gt_center" headers="stat_4">61 (28%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Nordeste</td>
+<td class="gt_row gt_center" headers="stat_1">79 (27%)</td>
+<td class="gt_row gt_center" headers="stat_2">49 (16%)</td>
+<td class="gt_row gt_center" headers="stat_3">73 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4">96 (32%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Norte</td>
+<td class="gt_row gt_center" headers="stat_1">84 (24%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">52 (15%)</td>
+<td class="gt_row gt_center" headers="stat_3">87 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">121 (35%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sudeste</td>
+<td class="gt_row gt_center" headers="stat_1">260 (27%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">206 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3">256 (27%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">240 (25%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sul</td>
+<td class="gt_row gt_center" headers="stat_1">135 (28%)</td>
+<td class="gt_row gt_center" headers="stat_2">94 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">130 (27%)</td>
+<td class="gt_row gt_center" headers="stat_4">131 (27%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Isolamento Social<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,003</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,079</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1">287 (28%)</td>
+<td class="gt_row gt_center" headers="stat_2">193 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">288 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">247 (24%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1">320 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">249 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">324 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">402 (31%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Trabalha<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,162</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">141 (20%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">165 (24%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">142 (20%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">251 (36%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">466 (29%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">277 (17%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">470 (29%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">398 (25%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Profissional de Saúde<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,012</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,069</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">443 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">352 (20%)</td>
+<td class="gt_row gt_center" headers="stat_3">459 (26%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">517 (29%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">164 (30%)</td>
+<td class="gt_row gt_center" headers="stat_2">90 (17%)</td>
+<td class="gt_row gt_center" headers="stat_3">153 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">132 (24%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Renda Familiar<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,101</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;até R$ 1254,00</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">56 (20%)</td>
+<td class="gt_row gt_center" headers="stat_2">61 (22%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">53 (19%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">105 (38%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;entre R$ 1.255 - R$ 8.640</td>
+<td class="gt_row gt_center" headers="stat_1">325 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">270 (20%)</td>
+<td class="gt_row gt_center" headers="stat_3">347 (26%)</td>
+<td class="gt_row gt_center" headers="stat_4">384 (29%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;mais de R$ 8.640</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">226 (32%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">111 (16%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">212 (30%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">160 (23%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Escolaridade<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,095</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ensino Fundamental Completo ou Analfabeto</td>
+<td class="gt_row gt_center" headers="stat_1">7 (17%)</td>
+<td class="gt_row gt_center" headers="stat_2">5 (12%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">5 (12%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">25 (60%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ensino Médio Completo</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">206 (23%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">205 (23%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">217 (24%)</td>
+<td class="gt_row gt_center" headers="stat_4">272 (30%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ensino Superior Completo</td>
+<td class="gt_row gt_center" headers="stat_1">100 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">88 (22%)</td>
+<td class="gt_row gt_center" headers="stat_3">98 (24%)</td>
+<td class="gt_row gt_center" headers="stat_4">116 (29%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Pós-graduação</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">294 (30%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">144 (15%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">292 (30%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">236 (24%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Covid<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,027</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,063</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1">428 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">312 (18%)</td>
+<td class="gt_row gt_center" headers="stat_3">452 (27%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">501 (30%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1">179 (29%)</td>
+<td class="gt_row gt_center" headers="stat_2">130 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3">160 (26%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">148 (24%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Consulta_Nutricionsta<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value">0,091</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,053</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1">480 (26%)</td>
+<td class="gt_row gt_center" headers="stat_2">358 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">517 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4">521 (28%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1">127 (29%)</td>
+<td class="gt_row gt_center" headers="stat_2">84 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">95 (22%)</td>
+<td class="gt_row gt_center" headers="stat_4">128 (29%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Dificuldade Financeira<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,125</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">515 (27%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">331 (18%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">534 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">507 (27%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">92 (22%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">111 (26%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">78 (18%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">142 (34%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Acesso a Alimento<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,111</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">522 (27%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">338 (18%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">532 (28%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">517 (27%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">85 (21%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">104 (26%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">80 (20%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">132 (33%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Tempo de Preparo da Refeição<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,079</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Aumentou</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">331 (28%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">246 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">283 (24%)</td>
+<td class="gt_row gt_center" headers="stat_4">311 (27%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Diminuiu</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">96 (32%)</td>
+<td class="gt_row gt_center" headers="stat_2">51 (17%)</td>
+<td class="gt_row gt_center" headers="stat_3">76 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4">76 (25%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não alterou</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">180 (21%)</td>
+<td class="gt_row gt_center" headers="stat_2">145 (17%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">253 (30%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">262 (31%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Consumo de Cigarro<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,091</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">562 (26%)</td>
+<td class="gt_row gt_center" headers="stat_2">421 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">582 (26%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">635 (29%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sim</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">45 (41%)</td>
+<td class="gt_row gt_center" headers="stat_2">21 (19%)</td>
+<td class="gt_row gt_center" headers="stat_3">30 (27%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">14 (13%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Atividade Física na Pandemia<sup>Q</sup></td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_4"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="**Cramér**">0,078</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Aumentou</td>
+<td class="gt_row gt_center" headers="stat_1">164 (25%)</td>
+<td class="gt_row gt_center" headers="stat_2">135 (21%)</td>
+<td class="gt_row gt_center" headers="stat_3">155 (24%)</td>
+<td class="gt_row gt_center" headers="stat_4">190 (30%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Diminuiu</td>
+<td class="gt_row gt_center" headers="stat_1" style="font-weight: bold">298 (29%)</td>
+<td class="gt_row gt_center" headers="stat_2">211 (20%)</td>
+<td class="gt_row gt_center" headers="stat_3">258 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">268 (26%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não alterou</td>
+<td class="gt_row gt_center" headers="stat_1">73 (23%)</td>
+<td class="gt_row gt_center" headers="stat_2" style="font-weight: bold">48 (15%)</td>
+<td class="gt_row gt_center" headers="stat_3" style="font-weight: bold">121 (38%)</td>
+<td class="gt_row gt_center" headers="stat_4">77 (24%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Não tenho o hábito</td>
+<td class="gt_row gt_center" headers="stat_1">72 (23%)</td>
+<td class="gt_row gt_center" headers="stat_2">48 (15%)</td>
+<td class="gt_row gt_center" headers="stat_3">78 (25%)</td>
+<td class="gt_row gt_center" headers="stat_4" style="font-weight: bold">114 (37%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+<td class="gt_row gt_center" headers="**Cramér**"><br>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="tabela-quantitativa" class="slide level2 scrollable">
+<h2>Tabela quantitativa:</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">tabela</a></li><li><a href="#tabset-1-2">box</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output-display">
+<div id="ijokwyguzj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ijokwyguzj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ijokwyguzj thead, #ijokwyguzj tbody, #ijokwyguzj tfoot, #ijokwyguzj tr, #ijokwyguzj td, #ijokwyguzj th {
+  border-style: none;
+}
+
+#ijokwyguzj p {
+  margin: 0;
+  padding: 0;
+}
+
+#ijokwyguzj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ijokwyguzj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ijokwyguzj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ijokwyguzj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ijokwyguzj .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 22px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ijokwyguzj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ijokwyguzj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ijokwyguzj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ijokwyguzj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ijokwyguzj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ijokwyguzj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ijokwyguzj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ijokwyguzj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ijokwyguzj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ijokwyguzj .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ijokwyguzj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ijokwyguzj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ijokwyguzj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ijokwyguzj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ijokwyguzj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ijokwyguzj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ijokwyguzj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ijokwyguzj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ijokwyguzj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ijokwyguzj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ijokwyguzj .gt_left {
+  text-align: left;
+}
+
+#ijokwyguzj .gt_center {
+  text-align: center;
+}
+
+#ijokwyguzj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ijokwyguzj .gt_font_normal {
+  font-weight: normal;
+}
+
+#ijokwyguzj .gt_font_bold {
+  font-weight: bold;
+}
+
+#ijokwyguzj .gt_font_italic {
+  font-style: italic;
+}
+
+#ijokwyguzj .gt_super {
+  font-size: 65%;
+}
+
+#ijokwyguzj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ijokwyguzj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ijokwyguzj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ijokwyguzj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ijokwyguzj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ijokwyguzj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ijokwyguzj .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ijokwyguzj .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ijokwyguzj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" style="width:100%;" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings gt_spanner_row header">
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Características</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th colspan="4" id="level 1; stat_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+<strong>Consumo de Bebidas Alcoólicas</strong>
+</div></th>
+<th rowspan="2" id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Valor-p</strong></th>
+<th rowspan="2" id="comparacoes" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Comparações Múltiplas</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
+</tr>
+<tr class="gt_col_headings even">
+<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Aumentou</strong><br>
+N = 607</th>
+<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Diminuiu</strong><br>
+N = 442</th>
+<th id="stat_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não alterou</strong><br>
+N = 612</th>
+<th id="stat_4" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Não consumo</strong><br>
+N = 649</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Idade<sup>W</sup></td>
+<td class="gt_row gt_center" headers="stat_1">33 (12)</td>
+<td class="gt_row gt_center" headers="stat_2">32 (13)</td>
+<td class="gt_row gt_center" headers="stat_3">35 (13)</td>
+<td class="gt_row gt_center" headers="stat_4">32 (13)</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="comparacoes">Aumentou = a<br>Diminuiu = a<br>Não alterou = b<br>Não consumo = a</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Altura<sup>A</sup></td>
+<td class="gt_row gt_center" headers="stat_1">1,65 (0,08)</td>
+<td class="gt_row gt_center" headers="stat_2">1,66 (0,09)</td>
+<td class="gt_row gt_center" headers="stat_3">1,66 (0,08)</td>
+<td class="gt_row gt_center" headers="stat_4">1,65 (0,08)</td>
+<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,009</td>
+<td class="gt_row gt_center" headers="comparacoes">Diminuiu = a<br>Não alterou = ab<br>Não consumo = b<br>Aumentou = b</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Peso<sup>A</sup></td>
+<td class="gt_row gt_center" headers="stat_1">70 (16)</td>
+<td class="gt_row gt_center" headers="stat_2">70 (16)</td>
+<td class="gt_row gt_center" headers="stat_3">70 (15)</td>
+<td class="gt_row gt_center" headers="stat_4">69 (17)</td>
+<td class="gt_row gt_center" headers="p.value">0,525</td>
+<td class="gt_row gt_center" headers="comparacoes">Diminuiu = a<br>Não alterou = a<br>Não consumo = a<br>Aumentou = a</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">IMC<sup>A</sup></td>
+<td class="gt_row gt_center" headers="stat_1">25,4 (4,7)</td>
+<td class="gt_row gt_center" headers="stat_2">25,4 (5,2)</td>
+<td class="gt_row gt_center" headers="stat_3">25,3 (4,9)</td>
+<td class="gt_row gt_center" headers="stat_4">25,3 (5,4)</td>
+<td class="gt_row gt_center" headers="p.value">0,955</td>
+<td class="gt_row gt_center" headers="comparacoes">Diminuiu = a<br>Não alterou = a<br>Não consumo = a<br>Aumentou = a</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_footnotes odd">
+<td colspan="7" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> ¹ Média (Desvio Padrão)</td>
+</tr>
+<tr class="gt_footnotes even">
+<td colspan="7" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> W: ANOVA de Welch com pós-teste Games-Howell | A: ANOVA clássica com pós-teste de Tukey</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<p><img data-src="Rplot02.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="achados-variáveis-qualitativas" class="slide level2">
+<h2>Achados variáveis qualitativas</h2>
+<p><strong>Principais associações encontradas</strong></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="box-yellow">
+<p><strong>Sem associação (p &gt; 0,05)</strong></p>
+<ul>
+<li>Gênero<br>
+</li>
+<li>Raça/Cor<br>
+</li>
+<li>Consulta com nutricionista</li>
+</ul>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<div class="box-gray">
+<p><strong>Com associação (p &lt; 0,05)</strong></p>
+<ul>
+<li>Trabalha<br>
+</li>
+<li>Renda familiar<br>
+</li>
+<li>Escolaridade<br>
+</li>
+<li>Dificuldade financeira<br>
+</li>
+<li>Acesso a alimentos<br>
+</li>
+<li>Isolamento social<br>
+</li>
+<li>Tabagismo<br>
+</li>
+<li>Atividade física<br>
+</li>
+<li>Tempo de preparo das refeições</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="como-os-grupos-se-comportam" class="slide level2">
+<h2>Como os grupos se comportam?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="box-yellow">
+<p><strong>Maior chance de AUMENTAR o consumo</strong></p>
+<ul>
+<li>Pessoas que trabalham<br>
+</li>
+<li>Maior renda<br>
+</li>
+<li>Maior escolaridade<br>
+</li>
+<li>Fumantes<br>
+</li>
+<li>Reduziram atividade física</li>
+</ul>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="box-gray">
+<p><strong>Maior chance de NÃO CONSUMIR</strong></p>
+<ul>
+<li>Dificuldade financeira<br>
+</li>
+<li>Dificuldade de acesso a alimentos<br>
+</li>
+<li>Pessoas que não trabalham</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="achados-variáveis-qualitativas-1" class="slide level2">
+<h2>achados variáveis qualitativas:</h2>
+<p><strong>O que as médias mostram?</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="box-yellow">
+<p><strong>Idade apresentou associação</strong></p>
+<ul>
+<li>Grupo que não alterou o consumo é mais velho</li>
+</ul>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="box-gray">
+<p><strong>Sem relevância prática</strong></p>
+<ul>
+<li>Altura (diferença mínima)<br>
+</li>
+<li>Peso<br>
+</li>
+<li>IMC</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="conclusão-do-estudo" class="slide level2">
+<h2>Conclusão do estudo</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="box-yellow">
+<p><strong>Objetivo</strong></p>
+<p>Avaliar fatores associados às mudanças no consumo de álcool.</p>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<div class="box-gray">
+<p><strong>Principais achados</strong></p>
+<ul>
+<li>Associação com fatores econômicos e comportamentais<br>
+</li>
+<li>Idade influencia o padrão de consumo<br>
+</li>
+<li>Sexo, raça e estado nutricional não influenciam</li>
+</ul>
+</div>
+</div></div>
+<div class="box-yellow">
+<p><strong>Interpretação final</strong></p>
+<p>O consumo de álcool refletiu o contexto social, emocional e econômico vivido durante a pandemia.</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 7.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

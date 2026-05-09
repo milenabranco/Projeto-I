@@ -1,0 +1,157 @@
+---
+title: "**PROJETO I**"
+subtitle: "**Prática Estatística II**"
+author: "Milena Labre (<milenalabre@id.uff.br>)"
+date: 2026-05-11
+date-format: "DD/MM/YYYY"
+institute: "Universidade Federal Fluminense"
+format:
+  revealjs:
+    css: custom.css
+    slide-number: true
+    incremental: false
+    transition: slide
+    background-transition: fade
+    width: 1280
+    height: 720
+    margin: 0.07
+    auto-stretch: false
+    title-slide-attributes:
+      data-background-image: "capa2.png"
+      data-background-size: "cover"
+---
+
+# 1. Introdução: {.section-background}
+
+## 1.1 **Contextualização:**
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.box-blue}
+
+- A pandemia da **COVID-19** gerou mudanças sociais, econômicas e comportamentais
+- Impacto direto nos hábitos e padrões de consumo
+:::
+
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="40%"}
+::: {.box-yellow}
+**Problema de pesquisa:**
+
+- Quais fatores estão associados às mudanças no consumo de bebidas alcoólicas durante a pandemia?
+:::
+
+:::
+
+::::
+:::{.box-gray}
+
+**Objetivo:**
+
+- Avaliar a associação entre a variável **Bebidas_Alcoolicas** e as variáveis explicativas.
+:::
+
+# 2. Metodologia: {.section-background}
+##
+
+:::: {.columns}
+
+::: {.column width="45%"}
+::: {.box-yellow}
+**Base do Estudo**
+
+- Questionário online (2022)  
+- **2310 indivíduos**
+:::
+:::
+
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="45%"}
+::: {.box-blue}
+**Variável resposta (desfecho):**
+
+- **Bebidas_Alcoolicas:** 
+ - Variável categórica nominal com quatro categorias:
+
+    - Aumentou, Diminuiu, Não alterou, Não consumo.
+
+
+:::
+:::
+
+
+::::
+
+**Variáveis Explicativas**
+
+| Tipo | Variáveis |
+|---|---|
+| Categóricas | Sociodemográficas, econômicas, comportamentais |
+| Contínuas | Idade, altura, peso, IMC |
+| Aberta | Sentimentos |
+
+
+
+
+## **Métodos estatísticos (α = 5%)**
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.box-blue}
+
+
+**Variáveis categóricas**
+
+- Qui-quadrado de independência  
+- V de Cramér → intensidade  
+- Resíduos padronizados → caselas influentes  
+
+**Condição:** frequências esperadas adequadas
+:::
+:::
+
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="45%"}
+::: {.box-yellow}
+**Variáveis contínuas — médias entre grupos**
+
+| Método | Quando usar | Pós-teste |
+|---|---|---|
+| ANOVA | Variâncias homogêneas | Tukey |
+| Welch | Variâncias heterogêneas | Games-Howell |
+
+**Pressupostos**
+
+- Normalidade: densidade + QQ-plot  
+- Homogeneidade: Levene e Bartlett
+:::
+:::
+
+::::
+
+# Resultados {.section-background}
+
+
+
+
+
+## Tabela qualitativa: {.scrollable}
+
+
+```{r,cache=TRUE}
+tabela<-readRDS("tabela_quali.rds")
+tabela
