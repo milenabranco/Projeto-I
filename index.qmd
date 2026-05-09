@@ -10,7 +10,7 @@ format:
     css: custom.css
     slide-number: true
     incremental: false
-    transition: fade
+    transition: slide
     background-transition: fade
     width: 1366
     height: 768
@@ -39,9 +39,7 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 ## Contextualização:
 
-:::: {.columns}
 
-::: {.column width="50%"}
 
 ::: {.box-blue}
 
@@ -52,14 +50,8 @@ tabela2 <- readRDS("tabela_quanti.rds")
 - Alterações emocionais podem ter influenciado o consumo de bebidas alcoólicas.
 
 :::
+<br>
 
-:::
-
-::: {.column width="10%"}
-
-:::
-
-::: {.column width="40%"}
 
 ::: {.box-yellow}
 
@@ -68,12 +60,8 @@ tabela2 <- readRDS("tabela_quanti.rds")
 - Quais fatores estão associados às mudanças no consumo de bebidas alcoólicas durante a pandemia?
 
 :::
-
-:::
-
-::::
-
 <br>
+
 
 ::: {.box-gray}
 
@@ -237,7 +225,7 @@ $$
 
 ## Tabela qualitativa {.scrollable}
 
-```{r}
+```{r,cache==TRUE}
 tabela
 ```
 
@@ -247,9 +235,12 @@ tabela
 ![](forest_categoricas.png)
 
 
-#  Perfil dos grupos: {.section-background}
 
-## Como os grupos se comportam?
+
+
+#  Perfil das categorias: {.section-background}
+
+## Como as categorias se comportam?
 
 :::: {.columns}
 
@@ -257,7 +248,7 @@ tabela
 
 ::: {.box-yellow}
 
-**Maior chance de AUMENTAR o consumo**
+**Maior associação com o aumento do consumo**
 
 - Pessoas que trabalham;
 - Maior renda;
@@ -277,7 +268,7 @@ tabela
 
 ::: {.box-gray}
 
-**Maior chance de NÃO CONSUMIR**
+**Maior associação com não consumo**
 
 - Dificuldade financeira;
 - Dificuldade de acesso a alimentos;
@@ -302,7 +293,6 @@ tabela
 **Sem associação significativa**
 
 - Gênero;
-- Raça/Cor;
 - Consulta com nutricionista.
 
 :::
@@ -327,7 +317,11 @@ tabela
 - Isolamento social;
 - Tabagismo;
 - Atividade física;
-- Tempo de preparo das refeições.
+- Raça/Cor;
+- Tempo de preparo das refeições;
+- Região;
+- Profissional de saúde;
+- Covid.
 
 :::
 
@@ -347,24 +341,25 @@ tabela
 tabela2
 ```
 
-### Boxplot
+###  Gráfico violin
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="59%"}
 
-![](boxplots_painel.png)
+![](painel_violin_artigo.png)
 
 :::
 
-::: {.column width="35%"}
+::: {.column width="41%"}
 
 ::: {.box-yellow}
 
 **Idade**
 
-- Associação significativa;
-- Grupo “Não alterou” apresentou maior média de idade.
+- Diferenças no perfil etário entre os padrões de consumo.
+- A categoria “Não alterou” apresentou maior média de idade.
+- Variação mais perceptível entre as categorias analisadas.
 
 :::
 
@@ -374,8 +369,8 @@ tabela2
 
 **Altura**
 
-- Diferença estatística significativa;
-- Baixa relevância prática.
+- Pequenas diferenças entre as categorias de consumo;
+- Distribuições muito semelhantes entre os perfis analisados.
 
 :::
 
@@ -385,9 +380,9 @@ tabela2
 
 **Peso e IMC**
 
-- Médias semelhantes entre os grupos;
-- Sem associação significativa.
+- Ausência de mudanças relevantes entre as categorias;
 
+- Não foi observado padrão corporal associado ao consumo.
 :::
 
 :::
@@ -398,7 +393,7 @@ tabela2
 
 # Aspectos emocionais: {.section-background}
 
-## Nuvem de palavras
+## Nuvem de palavras {background-color="#000000"}
 
 ![](nuvens_estratificadas_4.png)
 
@@ -425,12 +420,18 @@ tabela2
 
 **Interpretação:**
 
-Predominaram sentimentos negativos em todos os grupos analisados durante a pandemia.
+::: {.box-yellow}
 
-Os resultados sugerem impacto significativo na saúde mental, independentemente do padrão de consumo de bebida alcoólica.
+**Interpretação:**
 
+- Predomínio de sentimentos negativos em todas as categorias de consumo;
+- Ansiedade, medo e estresse apareceram como emoções mais frequentes durante a pandemia.
 
 :::
+
+:::
+
+# Conclusão {.section-background}
 
 ## Achados gerais do estudo:
 
@@ -440,7 +441,7 @@ Os resultados sugerem impacto significativo na saúde mental, independentemente 
 
 ::: {.box-up}
 
-⬆️ **Maior tendência de aumento no consumo alcoólico**
+⬆️ **Maior associação com aumento no consumo alcoólico**
 
 - Pessoas que trabalham;
 - Maior renda familiar;
@@ -458,7 +459,7 @@ Os resultados sugerem impacto significativo na saúde mental, independentemente 
 
 - Participantes mais jovens apresentaram maior tendência de aumento no consumo;
 
-- O grupo “Não alterou” apresentou maior média de idade.
+- A categoria “Não alterou” apresentou maior média de idade.
 
 :::
 
@@ -472,7 +473,7 @@ Os resultados sugerem impacto significativo na saúde mental, independentemente 
 
 ::: {.box-down}
 
-⬇️ **Maior tendência de não consumo**
+⬇️ **Maior associação com não consumo**
 
 - Dificuldade financeira;
 - Dificuldade de acesso a alimentos;
@@ -487,7 +488,6 @@ Os resultados sugerem impacto significativo na saúde mental, independentemente 
 ➡️ **Variáveis sem associação significativa**
 
 - Gênero;
-- Raça/cor;
 - Peso;
 - IMC;
 - Consulta com nutricionista.
