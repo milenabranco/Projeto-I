@@ -1,0 +1,518 @@
+/* ===== Base ===== */
+
+.reveal {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 30px;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* NÃO justificar tudo */
+.reveal .slides {
+  text-align: left;
+}
+
+/* Justificar apenas texto */
+.reveal .slides section li,
+.reveal p {
+  text-align: justify;
+}
+
+/* ===== TÍTULOS ===== */
+
+/* 🔵 Azul VIVO apenas no título principal */
+.reveal h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin: 10px 0 !important;
+}
+
+/* 🔹 Subtítulos com azul elegante */
+.reveal h2 {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #2e5c73;
+  margin-bottom: 20px;
+}
+
+.reveal h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #2e5c73;
+}
+
+/* ===== Slide de título ===== */
+
+.reveal .title-slide {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11, 28, 38, 0.6),
+      rgba(18, 18, 18, 0.6)
+    ),
+    url("media/transicao.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.reveal .title-slide h1,
+.reveal .title-slide h2,
+.reveal .title-slide p {
+  color: white;
+}
+
+/* ===== Texto ===== */
+
+.reveal p,
+.reveal li {
+  line-height: 1.45;
+}
+
+/* ===== Listas ===== */
+
+.reveal ul li::marker {
+  color: #c0392b;
+}
+
+/* ===== CAIXAS ===== */
+
+.box-blue,
+.box-yellow,
+.box-gray {
+  width: 100%;
+  margin: 12px 0;
+  padding: 16px 20px;
+  border-radius: 12px;
+  text-align: justify;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* 🔵 Azul elegante */
+.box-blue {
+  border-left: 8px solid #2e5c73;
+  background: linear-gradient(135deg, #eef7fb, #e6f0f5);
+}
+
+/* 🔴 Destaque */
+.box-yellow {
+  border-left: 8px solid #c0392b;
+  background: linear-gradient(135deg, #fdecea, #f9d6d2);
+}
+
+/* ⚪ Neutro */
+.box-gray {
+  border-left: 8px solid #94a3b8;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  color: #2c3e50;
+}
+
+/* ===== Destaques ===== */
+
+.highlight-blue {
+  color: #2e5c73;
+  font-weight: 700;
+}
+
+.highlight-yellow {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* ===== Código ===== */
+
+.reveal pre code {
+  font-size: 0.78em;
+  background: #0b1c26;
+  color: #e5e7eb;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+/* ===== Rodapé ===== */
+
+.reveal .footer {
+  font-size: 0.5em;
+  color: #64748b;
+}
+
+/* ===== Centralização capa ===== */
+
+.reveal section.title-slide,
+.reveal section[data-background-image] {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+/* ===== Fundo capítulos ===== */
+
+.section-background {
+  position: relative;
+  z-index: 0;
+}
+
+.section-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("transicao.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px) brightness(0.85);
+  z-index: -1;
+}
+
+/* ===== Título capítulo ===== */
+
+.section-background h1 {
+  position: absolute;
+  top: 35px !important;
+  left: 45px !important;
+  color: #1d4ed8;
+  text-align: left;
+  font-size: 52px !important;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+/* ===== Tabelas ===== */
+
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px !important;
+  margin-top: 15px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.reveal table th {
+  background-color: #2e5c73;
+  color: white;
+  padding: 6px 8px !important;
+  text-align: center;
+}
+
+.reveal table td {
+  padding: 6px 8px !important;
+  text-align: center;
+}
+
+.reveal table tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.reveal table tr:hover {
+  background-color: #e2e8f0;
+  transition: 0.3s;
+}
+
+/* ===== ABAS (TABSET QUARTO) ===== */
+
+.reveal .panel-tabset [role="tablist"] {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.reveal .panel-tabset [role="tab"] {
+  background: linear-gradient(135deg, #e6f0f5, #dbe7ef);
+  color: #2e5c73;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 2px solid #2e5c73;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.reveal .panel-tabset [role="tab"]:hover {
+  background: #2e5c73;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.reveal .panel-tabset [role="tab"][aria-selected="true"] {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: white;
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== IMAGENS ===== */
+
+.reveal .panel-tabset img,
+.reveal .box-blue img,
+.reveal .box-yellow img,
+.reveal .box-gray img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  width: 95%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* boxplot */
+.reveal section img[src*="boxplots"] {
+  width: 100% !important;
+  max-width: 950px !important;
+  height: auto !important;
+}
+
+/* nuvem */
+.reveal section img[src*="nuvens"] {
+  width: 100% !important;
+  max-width: 1200px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== AUTOR E INSTITUTO ===== */
+
+.reveal .title-slide .quarto-title-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px;
+  text-align: center !important;
+}
+
+.reveal .title-slide .quarto-title-meta > div {
+  width: 100%;
+}
+
+/* ===== BOXES EXTRAS ===== */
+
+.box-title {
+  background: #1f3a93;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.box-up {
+  background: #dff6dd;
+  color: #145a32;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.box-down {
+  background: #fdecea;
+  color: #922b21;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* ===== AJUSTE GERAL ===== */
+
+.reveal .slides section {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* textos */
+.reveal p,
+.reveal li {
+  font-size: 0.88em !important;
+  line-height: 1.25 !important;
+}
+
+/* listas */
+.reveal ul,
+.reveal ol {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.reveal li {
+  margin-bottom: 0.15em !important;
+}
+
+.reveal h2 {
+  font-size: 1.2em !important;
+  margin-bottom: 10px !important;
+}
+
+/* boxes */
+.box-blue,
+.box-yellow,
+.box-gray,
+.box-title,
+.box-up,
+.box-down {
+  padding: 10px 14px !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+/* colunas */
+.columns {
+  gap: 0.5rem !important;
+}
+
+/* ===== SLIDES SCROLLÁVEIS ===== */
+
+/* scroll apenas onde você colocar classe scrollable-table */
+.scrollable-table {
+  max-height: 620px !important;
+  overflow-y: auto !important;
+  padding-right: 6px;
+}
+
+/* scrollbar */
+.scrollable-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+/* reduz APENAS slides grandes */
+.reveal section.scrollable-table p,
+.reveal section.scrollable-table li {
+  font-size: 0.82em !important;
+  line-height: 1.18 !important;
+}
+
+.reveal section.scrollable-table table {
+  font-size: 16px !important;
+}
+
+.reveal section.scrollable-table table th,
+.reveal section.scrollable-table table td {
+  padding: 5px 7px !important;
+}
+
+.reveal section.scrollable-table .box-blue,
+.reveal section.scrollable-table .box-yellow,
+.reveal section.scrollable-table .box-gray,
+.reveal section.scrollable-table .box-up,
+.reveal section.scrollable-table .box-down {
+  padding: 10px 12px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+/* mantém imagens normais fora do scroll */
+.reveal section:not(.scrollable-table) img {
+  max-height: none !important;
+}
+
+/* ===== Último slide ===== */
+
+.reveal section:last-child img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 18px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== AJUSTE DO TÍTULO DA CAPA ===== */
+
+.reveal .title-slide h1 {
+  font-size: 3.4em !important;
+  margin-top: -120px !important;
+  margin-bottom: 20px !important;
+}
+
+.reveal .title-slide h2 {
+  font-size: 1.8em !important;
+  margin-top: 10px !important;
+}
+
+.reveal .title-slide .quarto-title-meta {
+  margin-top: 40px !important;
+}
+
+/* ===== SLIDE MÉTODOS ===== */
+
+.reveal section h2 + .columns {
+  margin-top: 10px;
+}
+
+/* melhora visual do alpha */
+.reveal .math.display {
+  margin-top: 12px !important;
+  font-size: 1.1em !important;
+}
+
+/* ===== TÍTULOS NORMAIS ===== */
+
+.reveal h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin: 10px 0 !important;
+}
+
+/* ===== APENAS CAPA ===== */
+
+.reveal .title-slide h1 {
+  font-size: 3.6em !important;
+  margin-top: -120px !important;
+  margin-bottom: 20px !important;
+}
+
+/* ===== Título das seções ===== */
+
+.section-background h1 {
+  position: absolute;
+  top: 50% !important;
+  left: 40px !important;
+  transform: translateY(-50%) !important;
+  color: #1d4ed8;
+  text-align: left;
+  font-size: 72px !important;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  width: auto;
+}
+
+/* ===== TABELAS MAIORES PARA APRESENTAÇÃO ===== */
+
+.reveal .slides section table {
+  width: 98% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-size: 22px !important;
+  table-layout: auto !important;
+}
+
+.reveal .slides section table th,
+.reveal .slides section table td {
+  padding: 10px 12px !important;
+  white-space: normal !important;
+}
+/* ===== AJUSTE TABELA MÉTODOS ===== */
+
+.reveal .slides section .metodos-table table {
+  width: 85% !important;
+  font-size: 12px !important;
+  table-layout: fixed !important;
+  margin: 0 auto !important;
+}
+
+.reveal .slides section .metodos-table th,
+.reveal .slides section .metodos-table td {
+  padding: 3px 5px !important;
+  text-align: center !important;
+  line-height: 1.1 !important;
+  word-break: break-word !important;
+}
