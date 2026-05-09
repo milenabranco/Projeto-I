@@ -416,9 +416,7 @@ tabela2
 
 <br>
 
-::: {.box-yellow}
 
-**Interpretação:**
 
 ::: {.box-yellow}
 
@@ -429,7 +427,7 @@ tabela2
 
 :::
 
-:::
+
 
 # Conclusão {.section-background}
 
