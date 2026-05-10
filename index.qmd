@@ -83,9 +83,9 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 **Base do estudo:**
 
-- Questionário online (2022);
-- 2310 indivíduos.
-
+- Dados coletados em 2022 por pesquisadoras da pós-graduação em Nutrição da Universidade Federal Fluminense;
+- Aplicação de questionário online durante a pandemia de COVID-19;
+- Amostra composta por 2310 participantes.
 :::
 
 <br>
@@ -150,75 +150,60 @@ Categorias:
 
 ::::
 
-## Métodos estatísticos
+## Métodos estatísticos  
 
-:::: {.columns}
+::: {.box-gray}
 
-::: {.column width="48%"}
+**Variáveis qualitativas**
 
-::: {.box-blue}
+- Qui-quadrado de Pearson — `chisq.test()`
+  <span style="color:#9CA3AF;">(associação entre variáveis categóricas)</span>
 
-**Variáveis categóricas**
+- Teste exato de Fisher — `fisher.test()`
+  <span style="color:#9CA3AF;">(baixas frequências esperadas)</span>
 
-- Qui-quadrado → associação entre categorias;
-- Fisher → frequências esperadas pequenas;
-- V de Cramér → intensidade da associação;
-- Resíduos padronizados → caselas influentes.
+- V de Cramér — `cramer_v()`
+  <span style="color:#9CA3AF;">(intensidade da associação)</span>
 
-**Funções utilizadas no R**
-
-- chisq.test, fisher.test, cramer_v.
-
-:::
+- Resíduos padronizados — `chisq.test()$stdres`
+  <span style="color:#9CA3AF;">(categorias com maior contribuição)</span>
 
 :::
 
-::: {.column width="4%"}
+<br>
 
-:::
-
-::: {.column width="48%"}
-
-::: {.box-yellow}
+::: {.box-gray}
 
 **Variáveis quantitativas**
 
-::: {.metodos-table}
+- QQ-plot e densidade
+  <span style="color:#9CA3AF;">(avaliação gráfica da normalidade)</span>
 
-| Método | Uso | Pós-teste |
-|---|---|---|
-| ANOVA | Variâncias homogêneas | Tukey |
-| Welch | Variâncias heterogêneas | Games-Howell |
+- Testes de Levene — `leveneTest()`
+  <span style="color:#9CA3AF;">(homogeneidade das variâncias)</span>
 
-:::
+- Teste de Bartlett — `bartlett.test()`
+  <span style="color:#9CA3AF;">(variâncias homogêneas sob normalidade)</span>
 
-**Funções utilizadas no R**
+- ANOVA clássica — `aov()`
+  <span style="color:#9CA3AF;">(comparação entre médias)</span>
 
-- aov, oneway.test, TukeyHSD, games_howell_test.
+- ANOVA de Welch — `oneway.test()`
+  <span style="color:#9CA3AF;">(variâncias heterogêneas)</span>
 
-**Pressupostos**
-
-- densidade;
-- QQ-plot;
-- Levene;
-- Bartlett.
-
-**Funções utilizadas**
-
-- ggplot, leveneTest, bartlett.test.
-
-$$
-\alpha = 5\%
-$$
+- Pós-testes:
+  - Tukey — `TukeyHSD()`
+  - Games-Howell — `games_howell_test()`
+  
+  <span style="color:#9CA3AF;">(comparações múltiplas entre grupos)</span>
 
 :::
 
-:::
+<div style="margin-top:10px; color:#9CA3AF; font-size:0.85em;">
 
-::::
+Todas as análises foram realizadas considerando nível de significância de 5% (α = 0,05).
 
-:::
-
+</div>
 
 
 #  Resultados {.section-background}
@@ -455,7 +440,7 @@ tabela2
 
 **Perfil observado**
 
-- Participantes mais jovens apresentaram maior tendência de aumento no consumo;
+- Participantes mais jovens apresentaram maior associação com o aumento no consumo;
 
 - A categoria “Não alterou” apresentou maior média de idade.
 
