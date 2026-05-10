@@ -159,7 +159,7 @@ tabela_quali<-tbl_summary(data = DadosQuali,
     ) )%>% 
   bold_p(t = 0.05) %>%
   add_stat(fns = all_categorical() ~ cramer_fun) %>%
-  modify_spanning_header(all_stat_cols() ~ "**Consumo de Bebidas Alcoólicas**") %>%
+  modify_spanning_header(all_stat_cols() ~ "**Mudança no consumo de Bebidas Alcoólicas**") %>%
   modify_header(label ~ "**Variáveis**") %>%
   bold_labels() %>%
   modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)") %>%

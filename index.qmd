@@ -253,7 +253,7 @@ Todas as análises foram realizadas considerando nível de significância de 5% 
 
 ## Tabela qualitativa {.scrollable}
 
-```{r,cache=TRUE}
+```{r}
 tabela
 ```
 

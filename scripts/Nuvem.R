@@ -169,3 +169,100 @@ print(plot)
 ggsave("nuvens_estratificadas_4.png", plot = plot, width = 12, height = 8, dpi = 300)
 
 
+# 8) Plotagem: 4 nuvens estratificadas em grid 2x2
+plot <- ggplot(top_words, aes(label = palavra, size = n^0.5, color = ranking)) +
+  geom_text_wordcloud(
+    seed = 123,
+    min.size = 3,
+    max.size = 10
+  ) +
+  facet_wrap(~Bebidas_Alcoolicas, ncol = 2) +
+  scale_size_area(max_size = 12) +
+  scale_color_gradientn(
+    colours = colorRampPalette(
+      c("#6D071A", "#FFD60A", "#2563EB")
+    )(15)
+  )+
+  theme_minimal() +
+  
+  theme(
+    
+    # FUNDO GERAL
+    plot.background = element_rect(
+      fill = "#050816",
+      color = NA
+    ),
+    
+    # FUNDO DOS PAINÉIS
+    panel.background = element_rect(
+      fill = "#050816",
+      color = NA
+    ),
+    
+    # REMOVE GRID
+    panel.grid = element_blank(),
+    
+    # BORDA DOS FACETS
+    panel.border = element_rect(
+      color = "#1e293b",
+      fill = NA,
+      linewidth = 1
+    ),
+    
+    # TÍTULOS DOS FACETS
+    strip.background = element_rect(
+      fill = "#0f172a",
+      color = "#334155"
+    ),
+    
+    strip.text = element_text(
+      face = "bold",
+      color = "white",
+      size = 12
+    ),
+    
+    # TÍTULO PRINCIPAL
+    plot.title = element_text(
+      size = 18,
+      face = "bold",
+      color = "white"
+    ),
+    
+    # SUBTÍTULO
+    plot.subtitle = element_text(
+      color = "gray80",
+      size = 11
+    ),
+    
+    # LEGENDA
+    legend.text = element_text(color = "white"),
+    legend.title = element_text(color = "white"),
+    
+    # FUNDO DA LEGENDA
+    legend.background = element_rect(
+      fill = "#050816",
+      color = NA
+    ),
+    
+    # TEXTO DOS EIXOS
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    
+    # REMOVE EIXOS
+    axis.ticks = element_blank()
+  ) +
+  labs(
+    title = "Sentimentos relatados durante a pandemia por consumo de bebida alcoólica",
+    color = "Ranking (freq.)"
+  )
+
+# 9) Salvar/imprimir
+print(plot)
+
+ggsave(
+  "nuvens_estratificadas_4.png",
+  plot = plot,
+  width = 13,
+  height = 7,
+  dpi = 300
+)

@@ -157,7 +157,7 @@ tabela_quanti <- tbl_summary(
     pvalue_fun = label_style_pvalue(digits = 3)
   ) %>%
   bold_p(t = 0.05) %>%
-  modify_spanning_header(all_stat_cols() ~ "**Consumo de Bebidas Alcoólicas**") %>%
+  modify_spanning_header(all_stat_cols() ~ "**Mudança no consumo de Bebidas Alcoólicas**") %>%
   modify_header(label ~ "**Variáveis**") %>%
   bold_labels() %>%
   modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)") %>%
@@ -170,6 +170,7 @@ tabela_quanti <- tbl_summary(
     column_labels.font.size = "22px"
   )
 tabela_quanti
+# salvando tabela em rds
 
 
 modelo <- aov(IMC ~ Bebidas_Alcoolicas, data = Dados1)
@@ -298,7 +299,7 @@ tabela_quanti_final <-
   ) %>%
   
   modify_spanning_header(
-    all_stat_cols() ~ "**Consumo de bebidas alcoólicas**"
+    all_stat_cols() ~ "**Mudança no consumo de bebidas alcoólicas**"
   ) %>%
   
   modify_table_styling(
@@ -333,6 +334,13 @@ tabela_quanti_final <-
 
 # Visualizar tabela
 tabela_quanti_final
+tabela_quanti_final <- tabela_quanti_final%>%
+  tab_style(
+    style = cell_fill(color = "#dbeafe"),
+    locations = cells_body(
+      rows = p.value < 0.05
+    )
+  )
 
 
 # salvando tabela em rds
