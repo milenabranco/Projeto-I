@@ -199,31 +199,25 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
 <p><br></p>
 <div class="box-blue">
 <p><strong>Variável resposta:</strong></p>
-<ul>
-<li>Bebidas_Alcoolicas.</li>
-</ul>
-<p>Categorias:</p>
-<ul>
-<li>Aumentou;</li>
-<li>Diminuiu;</li>
-<li>Não alterou;</li>
-<li>Não consumo.</li>
-</ul>
+<p><strong>Bebidas_Alcoolicas</strong> <span style="color:#8C96A0; font-size:0.72em;"> (Qualitativa nominal politômica) </span></p>
+<p><br></p>
+<p><strong>Categorias:</strong> aumentou, diminuiu, não alterou e não consumo.</p>
 </div>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:45%;">
 <div class="box-gray">
-<p><strong>Variáveis categóricas:</strong></p>
+<p><strong>Variáveis qualitativas categóricas:</strong></p>
 <ul>
 <li>Sociodemográficas;</li>
 <li>Econômicas;</li>
 <li>Comportamentais.</li>
 </ul>
+<p><span style="color:#8C96A0; font-size:0.72em;"> Ex.: gênero, raça/cor, renda, escolaridade, tabagismo e isolamento social. </span></p>
 </div>
 <p><br></p>
 <div class="box-yellow">
-<p><strong>Variáveis contínuas:</strong></p>
+<p><strong>Variáveis quantitativas contínuas:</strong></p>
 <ul>
 <li>Idade;</li>
 <li>Altura;</li>
@@ -233,44 +227,71 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
 </div>
 <p><br></p>
 <div class="box-blue">
-<p><strong>Questão aberta:</strong></p>
+<p><strong>Variável aberta:</strong></p>
 <ul>
 <li>sentimentos_pandemia.</li>
 </ul>
+<p><span style="color:#8C96A0; font-size:0.72em;"> (Análises descritivas e interpretação textual.) </span></p>
 </div>
 </div></div>
 </section>
 <section id="métodos-estatísticos" class="slide level2" data-number="2.2">
 <h2><span class="header-section-number">2.2</span> Métodos estatísticos</h2>
-<div class="box-gray">
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="box-blue">
 <p><strong>Variáveis qualitativas</strong></p>
 <ul>
-<li><p>Qui-quadrado de Pearson — <code>chisq.test()</code> <span style="color:#9CA3AF;">(associação entre variáveis categóricas)</span></p></li>
-<li><p>Teste exato de Fisher — <code>fisher.test()</code> <span style="color:#9CA3AF;">(baixas frequências esperadas)</span></p></li>
-<li><p>V de Cramér — <code>cramer_v()</code> <span style="color:#9CA3AF;">(intensidade da associação)</span></p></li>
-<li><p>Resíduos padronizados — <code>chisq.test()$stdres</code> <span style="color:#9CA3AF;">(categorias com maior contribuição)</span></p></li>
+<li><p>Qui-quadrado de Pearson<br>
+<span style="color:#9CA3AF;">(associação entre variáveis categóricas)</span></p></li>
+<li><p>Teste exato de Fisher<br>
+<span style="color:#9CA3AF;">(baixas frequências esperadas)</span></p></li>
+<li><p>V de Cramér<br>
+<span style="color:#9CA3AF;">(intensidade da associação)</span></p></li>
+<li><p>Resíduos padronizados<br>
+<span style="color:#9CA3AF;">(categorias com maior contribuição)</span></p></li>
 </ul>
 </div>
 <p><br></p>
 <div class="box-gray">
+<p><strong>Pacotes utilizados no R</strong></p>
+<p><span style="color:#9CA3AF; font-size:0.73em;"></span></p>
+<ul>
+<li><strong>openxlsx</strong> → importação da base;</li>
+<li><strong>dplyr</strong> e <strong>tidyverse</strong> → manipulação dos dados;</li>
+<li><strong>gtsummary</strong> e <strong>gt</strong> → tabelas;</li>
+<li><strong>rstatix</strong>, <strong>DescTools</strong> e <strong>car</strong> → testes estatísticos;</li>
+<li><strong>ggplot2</strong>, <strong>ggpubr</strong> e <strong>qqplotr</strong> → gráficos e diagnóstico;</li>
+<li><strong>patchwork</strong> → combinação de gráficos;</li>
+<li><strong>ggwordcloud</strong> e <strong>tidytext</strong> → análise textual.</li>
+</ul>
+<p></p>
+</div>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<div class="box-blue">
 <p><strong>Variáveis quantitativas</strong></p>
 <ul>
-<li><p>QQ-plot e densidade <span style="color:#9CA3AF;">(avaliação gráfica da normalidade)</span></p></li>
-<li><p>Testes de Levene — <code>leveneTest()</code> <span style="color:#9CA3AF;">(homogeneidade das variâncias)</span></p></li>
-<li><p>Teste de Bartlett — <code>bartlett.test()</code> <span style="color:#9CA3AF;">(variâncias homogêneas sob normalidade)</span></p></li>
-<li><p>ANOVA clássica — <code>aov()</code> <span style="color:#9CA3AF;">(comparação entre médias)</span></p></li>
-<li><p>ANOVA de Welch — <code>oneway.test()</code> <span style="color:#9CA3AF;">(variâncias heterogêneas)</span></p></li>
-<li><p>Pós-testes:</p>
-<ul>
-<li>Tukey — <code>TukeyHSD()</code></li>
-<li>Games-Howell — <code>games_howell_test()</code></li>
-</ul>
-<p><span style="color:#9CA3AF;">(comparações múltiplas entre grupos)</span></p></li>
+<li><p>QQ-plot e densidade<br>
+<span style="color:#9CA3AF;">(avaliação da distribuição dos dados)</span></p></li>
+<li><p>Testes de Levene e Bartlett<br>
+<span style="color:#9CA3AF;">(homogeneidade das variâncias)</span></p></li>
+<li><p>ANOVA clássica<br>
+<span style="color:#9CA3AF;">(comparação entre médias)</span></p></li>
+<li><p>ANOVA de Welch<br>
+<span style="color:#9CA3AF;">(heterogeneidade das variâncias)</span></p></li>
+<li><p>Pós-testes: Tukey e Games-Howell<br>
+<span style="color:#9CA3AF;">(comparações múltiplas)</span></p></li>
 </ul>
 </div>
-<div style="margin-top:10px; color:#9CA3AF; font-size:0.85em;">
+<p><br></p>
+<div style="color:#7C8591; font-size:0.78em;">
+<p>Pressupostos avaliados: distribuição dos dados, homogeneidade das variâncias e frequências esperadas das tabelas de contingência.</p>
+<p><br><br></p>
 <p>Todas as análises foram realizadas considerando nível de significância de 5% (α = 0,05).</p>
 </div>
+</div></div>
 </section></section>
 <section>
 <section id="resultados" class="title-slide slide level1 section-background center" data-number="3">
@@ -281,23 +302,23 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
 <h2><span class="header-section-number">3.1</span> Tabela qualitativa</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tofffjggjf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tofffjggjf table {
+<div id="azvzvakfcb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#azvzvakfcb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tofffjggjf thead, #tofffjggjf tbody, #tofffjggjf tfoot, #tofffjggjf tr, #tofffjggjf td, #tofffjggjf th {
+#azvzvakfcb thead, #azvzvakfcb tbody, #azvzvakfcb tfoot, #azvzvakfcb tr, #azvzvakfcb td, #azvzvakfcb th {
   border-style: none;
 }
 
-#tofffjggjf p {
+#azvzvakfcb p {
   margin: 0;
   padding: 0;
 }
 
-#tofffjggjf .gt_table {
+#azvzvakfcb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -323,12 +344,12 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-left-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_caption {
+#azvzvakfcb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tofffjggjf .gt_title {
+#azvzvakfcb .gt_title {
   color: #333333;
   font-size: 26px;
   font-weight: initial;
@@ -340,7 +361,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-width: 0;
 }
 
-#tofffjggjf .gt_subtitle {
+#azvzvakfcb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -352,7 +373,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-top-width: 0;
 }
 
-#tofffjggjf .gt_heading {
+#azvzvakfcb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -364,13 +385,13 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_bottom_border {
+#azvzvakfcb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_col_headings {
+#azvzvakfcb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -385,7 +406,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_col_heading {
+#azvzvakfcb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 22px;
@@ -405,7 +426,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   overflow-x: hidden;
 }
 
-#tofffjggjf .gt_column_spanner_outer {
+#azvzvakfcb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 22px;
@@ -417,15 +438,15 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 4px;
 }
 
-#tofffjggjf .gt_column_spanner_outer:first-child {
+#azvzvakfcb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tofffjggjf .gt_column_spanner_outer:last-child {
+#azvzvakfcb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tofffjggjf .gt_column_spanner {
+#azvzvakfcb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -437,11 +458,11 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   width: 100%;
 }
 
-#tofffjggjf .gt_spanner_row {
+#azvzvakfcb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tofffjggjf .gt_group_heading {
+#azvzvakfcb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -467,7 +488,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   text-align: left;
 }
 
-#tofffjggjf .gt_empty_group_heading {
+#azvzvakfcb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -482,15 +503,15 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   vertical-align: middle;
 }
 
-#tofffjggjf .gt_from_md > :first-child {
+#azvzvakfcb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tofffjggjf .gt_from_md > :last-child {
+#azvzvakfcb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tofffjggjf .gt_row {
+#azvzvakfcb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -509,7 +530,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   overflow-x: hidden;
 }
 
-#tofffjggjf .gt_stub {
+#azvzvakfcb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -522,7 +543,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#tofffjggjf .gt_stub_row_group {
+#azvzvakfcb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -536,15 +557,15 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   vertical-align: top;
 }
 
-#tofffjggjf .gt_row_group_first td {
+#azvzvakfcb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tofffjggjf .gt_row_group_first th {
+#azvzvakfcb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tofffjggjf .gt_summary_row {
+#azvzvakfcb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -554,16 +575,16 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#tofffjggjf .gt_first_summary_row {
+#azvzvakfcb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_first_summary_row.thick {
+#azvzvakfcb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tofffjggjf .gt_last_summary_row {
+#azvzvakfcb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -573,7 +594,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_grand_summary_row {
+#azvzvakfcb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -583,7 +604,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#tofffjggjf .gt_first_grand_summary_row {
+#azvzvakfcb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -593,7 +614,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-top-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_last_grand_summary_row_top {
+#azvzvakfcb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -603,11 +624,11 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_striped {
+#azvzvakfcb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tofffjggjf .gt_table_body {
+#azvzvakfcb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -616,7 +637,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_footnotes {
+#azvzvakfcb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -630,7 +651,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_footnote {
+#azvzvakfcb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -639,7 +660,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#tofffjggjf .gt_sourcenotes {
+#azvzvakfcb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -653,7 +674,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#tofffjggjf .gt_sourcenote {
+#azvzvakfcb .gt_sourcenote {
   font-size: 13px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -661,72 +682,72 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#tofffjggjf .gt_left {
+#azvzvakfcb .gt_left {
   text-align: left;
 }
 
-#tofffjggjf .gt_center {
+#azvzvakfcb .gt_center {
   text-align: center;
 }
 
-#tofffjggjf .gt_right {
+#azvzvakfcb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tofffjggjf .gt_font_normal {
+#azvzvakfcb .gt_font_normal {
   font-weight: normal;
 }
 
-#tofffjggjf .gt_font_bold {
+#azvzvakfcb .gt_font_bold {
   font-weight: bold;
 }
 
-#tofffjggjf .gt_font_italic {
+#azvzvakfcb .gt_font_italic {
   font-style: italic;
 }
 
-#tofffjggjf .gt_super {
+#azvzvakfcb .gt_super {
   font-size: 65%;
 }
 
-#tofffjggjf .gt_footnote_marks {
+#azvzvakfcb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tofffjggjf .gt_asterisk {
+#azvzvakfcb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tofffjggjf .gt_indent_1 {
+#azvzvakfcb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tofffjggjf .gt_indent_2 {
+#azvzvakfcb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tofffjggjf .gt_indent_3 {
+#azvzvakfcb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tofffjggjf .gt_indent_4 {
+#azvzvakfcb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tofffjggjf .gt_indent_5 {
+#azvzvakfcb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tofffjggjf .katex-display {
+#azvzvakfcb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tofffjggjf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#azvzvakfcb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1485,7 +1506,6 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
 </div>
 </div></div>
 <p><br></p>
-<p><strong>Principais associações</strong></p>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="box-blue">
@@ -1531,23 +1551,23 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
 <div id="tabset-1-1">
 <div class="cell">
 <div class="cell-output-display">
-<div id="oftrbjosgw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#oftrbjosgw table {
+<div id="edrfjvmgbu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#edrfjvmgbu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#oftrbjosgw thead, #oftrbjosgw tbody, #oftrbjosgw tfoot, #oftrbjosgw tr, #oftrbjosgw td, #oftrbjosgw th {
+#edrfjvmgbu thead, #edrfjvmgbu tbody, #edrfjvmgbu tfoot, #edrfjvmgbu tr, #edrfjvmgbu td, #edrfjvmgbu th {
   border-style: none;
 }
 
-#oftrbjosgw p {
+#edrfjvmgbu p {
   margin: 0;
   padding: 0;
 }
 
-#oftrbjosgw .gt_table {
+#edrfjvmgbu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1573,12 +1593,12 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-left-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_caption {
+#edrfjvmgbu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#oftrbjosgw .gt_title {
+#edrfjvmgbu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1590,7 +1610,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-width: 0;
 }
 
-#oftrbjosgw .gt_subtitle {
+#edrfjvmgbu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1602,7 +1622,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-top-width: 0;
 }
 
-#oftrbjosgw .gt_heading {
+#edrfjvmgbu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1614,13 +1634,13 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_bottom_border {
+#edrfjvmgbu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_col_headings {
+#edrfjvmgbu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1635,7 +1655,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_col_heading {
+#edrfjvmgbu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 22px;
@@ -1655,7 +1675,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   overflow-x: hidden;
 }
 
-#oftrbjosgw .gt_column_spanner_outer {
+#edrfjvmgbu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 22px;
@@ -1667,15 +1687,15 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 4px;
 }
 
-#oftrbjosgw .gt_column_spanner_outer:first-child {
+#edrfjvmgbu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oftrbjosgw .gt_column_spanner_outer:last-child {
+#edrfjvmgbu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oftrbjosgw .gt_column_spanner {
+#edrfjvmgbu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1687,11 +1707,11 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   width: 100%;
 }
 
-#oftrbjosgw .gt_spanner_row {
+#edrfjvmgbu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#oftrbjosgw .gt_group_heading {
+#edrfjvmgbu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1717,7 +1737,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   text-align: left;
 }
 
-#oftrbjosgw .gt_empty_group_heading {
+#edrfjvmgbu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1732,15 +1752,15 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   vertical-align: middle;
 }
 
-#oftrbjosgw .gt_from_md > :first-child {
+#edrfjvmgbu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oftrbjosgw .gt_from_md > :last-child {
+#edrfjvmgbu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oftrbjosgw .gt_row {
+#edrfjvmgbu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1759,7 +1779,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   overflow-x: hidden;
 }
 
-#oftrbjosgw .gt_stub {
+#edrfjvmgbu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1772,7 +1792,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#oftrbjosgw .gt_stub_row_group {
+#edrfjvmgbu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1786,15 +1806,15 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   vertical-align: top;
 }
 
-#oftrbjosgw .gt_row_group_first td {
+#edrfjvmgbu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#oftrbjosgw .gt_row_group_first th {
+#edrfjvmgbu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#oftrbjosgw .gt_summary_row {
+#edrfjvmgbu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1804,16 +1824,16 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#oftrbjosgw .gt_first_summary_row {
+#edrfjvmgbu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_first_summary_row.thick {
+#edrfjvmgbu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#oftrbjosgw .gt_last_summary_row {
+#edrfjvmgbu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1823,7 +1843,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_grand_summary_row {
+#edrfjvmgbu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1833,7 +1853,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#oftrbjosgw .gt_first_grand_summary_row {
+#edrfjvmgbu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1843,7 +1863,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-top-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_last_grand_summary_row_top {
+#edrfjvmgbu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1853,11 +1873,11 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_striped {
+#edrfjvmgbu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oftrbjosgw .gt_table_body {
+#edrfjvmgbu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1866,7 +1886,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-bottom-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_footnotes {
+#edrfjvmgbu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1880,7 +1900,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_footnote {
+#edrfjvmgbu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1889,7 +1909,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#oftrbjosgw .gt_sourcenotes {
+#edrfjvmgbu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1903,7 +1923,7 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   border-right-color: #D3D3D3;
 }
 
-#oftrbjosgw .gt_sourcenote {
+#edrfjvmgbu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1911,72 +1931,72 @@ Milena Labre (<a href="mailto:milenalabre@id.uff.br" class="email">milenalabre@i
   padding-right: 5px;
 }
 
-#oftrbjosgw .gt_left {
+#edrfjvmgbu .gt_left {
   text-align: left;
 }
 
-#oftrbjosgw .gt_center {
+#edrfjvmgbu .gt_center {
   text-align: center;
 }
 
-#oftrbjosgw .gt_right {
+#edrfjvmgbu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oftrbjosgw .gt_font_normal {
+#edrfjvmgbu .gt_font_normal {
   font-weight: normal;
 }
 
-#oftrbjosgw .gt_font_bold {
+#edrfjvmgbu .gt_font_bold {
   font-weight: bold;
 }
 
-#oftrbjosgw .gt_font_italic {
+#edrfjvmgbu .gt_font_italic {
   font-style: italic;
 }
 
-#oftrbjosgw .gt_super {
+#edrfjvmgbu .gt_super {
   font-size: 65%;
 }
 
-#oftrbjosgw .gt_footnote_marks {
+#edrfjvmgbu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#oftrbjosgw .gt_asterisk {
+#edrfjvmgbu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#oftrbjosgw .gt_indent_1 {
+#edrfjvmgbu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#oftrbjosgw .gt_indent_2 {
+#edrfjvmgbu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#oftrbjosgw .gt_indent_3 {
+#edrfjvmgbu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#oftrbjosgw .gt_indent_4 {
+#edrfjvmgbu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#oftrbjosgw .gt_indent_5 {
+#edrfjvmgbu .gt_indent_5 {
   text-indent: 25px;
 }
 
-#oftrbjosgw .katex-display {
+#edrfjvmgbu .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#oftrbjosgw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#edrfjvmgbu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2134,7 +2154,7 @@ N = 649</th>
 <div class="columns">
 <div class="column" style="width:48%;">
 <div class="box-up">
-<p>⬆️ <strong>Maior associação com aumento no consumo alcoólico</strong></p>
+<p>⬆️ <strong>Categorias com maior associação ao aumento do consumo:</strong></p>
 <ul>
 <li>Pessoas que trabalham;</li>
 <li>Maior renda familiar;</li>
@@ -2176,7 +2196,7 @@ N = 649</th>
 <p><br></p>
 <div class="box-yellow">
 <p><strong>Síntese geral</strong></p>
-<p>Os resultados sugerem que mudanças econômicas, emocionais e comportamentais durante a pandemia influenciaram os padrões de consumo de bebidas alcoólicas.</p>
+<p>Os resultados sugerem que mudanças econômicas, emocionais e comportamentais durante a pandemia apresentaram associação com os padrões de consumo de bebidas alcoólicas.</p>
 </div>
 </section></section>
 <section id="fim" class="title-slide slide level1 section-background center" data-number="8">

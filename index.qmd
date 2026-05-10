@@ -96,15 +96,14 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 **Variável resposta:**
 
-- Bebidas_Alcoolicas.
+**Bebidas_Alcoolicas**
+<span style="color:#8C96A0; font-size:0.72em;">
+(Qualitativa nominal politômica)
+</span>
 
-Categorias:
+<br>
 
-- Aumentou;
-- Diminuiu;
-- Não alterou;
-- Não consumo.
-
+**Categorias:** aumentou, diminuiu, não alterou e não consumo.
 :::
 
 :::
@@ -117,11 +116,15 @@ Categorias:
 
 ::: {.box-gray}
 
-**Variáveis categóricas:**
+**Variáveis qualitativas categóricas:**
 
 - Sociodemográficas;
 - Econômicas;
 - Comportamentais.
+
+<span style="color:#8C96A0; font-size:0.72em;">
+Ex.: gênero, raça/cor, renda, escolaridade, tabagismo e isolamento social.
+</span>
 
 :::
 
@@ -129,22 +132,26 @@ Categorias:
 
 ::: {.box-yellow}
 
-**Variáveis contínuas:**
+**Variáveis quantitativas contínuas:**
 
 - Idade;
 - Altura;
 - Peso;
 - IMC.
-
 :::
 
 <br>
 
 ::: {.box-blue}
 
-**Questão aberta:**
+**Variável aberta:**
 
 - sentimentos_pandemia.
+
+<span style="color:#8C96A0; font-size:0.72em;">
+(Análises descritivas e interpretação textual.)
+</span>
+
 
 :::
 
@@ -154,21 +161,25 @@ Categorias:
 
 ## Métodos estatísticos  
 
-::: {.box-gray}
+::: {.columns}
+
+::: {.column width="48%"}
+
+::: {.box-blue}
 
 **Variáveis qualitativas**
 
-- Qui-quadrado de Pearson — `chisq.test()`
-  <span style="color:#9CA3AF;">(associação entre variáveis categóricas)</span>
+- Qui-quadrado de Pearson  
+<span style="color:#9CA3AF;">(associação entre variáveis categóricas)</span>
 
-- Teste exato de Fisher — `fisher.test()`
-  <span style="color:#9CA3AF;">(baixas frequências esperadas)</span>
+- Teste exato de Fisher  
+<span style="color:#9CA3AF;">(baixas frequências esperadas)</span>
 
-- V de Cramér — `cramer_v()`
-  <span style="color:#9CA3AF;">(intensidade da associação)</span>
+- V de Cramér  
+<span style="color:#9CA3AF;">(intensidade da associação)</span>
 
-- Resíduos padronizados — `chisq.test()$stdres`
-  <span style="color:#9CA3AF;">(categorias com maior contribuição)</span>
+- Resíduos padronizados  
+<span style="color:#9CA3AF;">(categorias com maior contribuição)</span>
 
 :::
 
@@ -176,43 +187,73 @@ Categorias:
 
 ::: {.box-gray}
 
-**Variáveis quantitativas**
+**Pacotes utilizados no R**
 
-- QQ-plot e densidade
-  <span style="color:#9CA3AF;">(avaliação gráfica da normalidade)</span>
+<span style="color:#9CA3AF; font-size:0.73em;">
 
-- Testes de Levene — `leveneTest()`
-  <span style="color:#9CA3AF;">(homogeneidade das variâncias)</span>
+- **openxlsx** → importação da base;
+- **dplyr** e **tidyverse** → manipulação dos dados;
+- **gtsummary** e **gt** → tabelas;
+- **rstatix**, **DescTools** e **car** → testes estatísticos;
+- **ggplot2**, **ggpubr** e **qqplotr** → gráficos e diagnóstico;
+- **patchwork** → combinação de gráficos;
+- **ggwordcloud** e **tidytext** → análise textual.
 
-- Teste de Bartlett — `bartlett.test()`
-  <span style="color:#9CA3AF;">(variâncias homogêneas sob normalidade)</span>
-
-- ANOVA clássica — `aov()`
-  <span style="color:#9CA3AF;">(comparação entre médias)</span>
-
-- ANOVA de Welch — `oneway.test()`
-  <span style="color:#9CA3AF;">(variâncias heterogêneas)</span>
-
-- Pós-testes:
-  - Tukey — `TukeyHSD()`
-  - Games-Howell — `games_howell_test()`
-  
-  <span style="color:#9CA3AF;">(comparações múltiplas entre grupos)</span>
+</span>
 
 :::
 
-<div style="margin-top:10px; color:#9CA3AF; font-size:0.85em;">
+:::
+
+::: {.column width="4%"}
+
+:::
+
+::: {.column width="48%"}
+
+::: {.box-blue}
+
+**Variáveis quantitativas**
+
+- QQ-plot e densidade  
+<span style="color:#9CA3AF;">(avaliação da distribuição dos dados)</span>
+
+- Testes de Levene e Bartlett  
+<span style="color:#9CA3AF;">(homogeneidade das variâncias)</span>
+
+- ANOVA clássica  
+<span style="color:#9CA3AF;">(comparação entre médias)</span>
+
+- ANOVA de Welch  
+<span style="color:#9CA3AF;">(heterogeneidade das variâncias)</span>
+
+- Pós-testes: Tukey e Games-Howell  
+<span style="color:#9CA3AF;">(comparações múltiplas)</span>
+
+:::
+
+<br>
+
+<div style="color:#7C8591; font-size:0.78em;">
+
+Pressupostos avaliados: distribuição dos dados, homogeneidade das variâncias e frequências esperadas das tabelas de contingência.
+
+<br><br>
 
 Todas as análises foram realizadas considerando nível de significância de 5% (α = 0,05).
 
 </div>
+:::
+
+:::
+
 
 
 #  Resultados {.section-background}
 
 ## Tabela qualitativa {.scrollable}
 
-```{r,cache==TRUE}
+```{r,cache=TRUE}
 tabela
 ```
 
@@ -269,7 +310,6 @@ tabela
 
 <br>
 
-**Principais associações**
 
 :::: {.columns}
 
@@ -426,7 +466,7 @@ tabela2
 
 ::: {.box-up}
 
-⬆️ **Maior associação com aumento no consumo alcoólico**
+⬆️ **Categorias com maior associação ao aumento do consumo:**
 
 - Pessoas que trabalham;
 - Maior renda familiar;
@@ -489,8 +529,7 @@ tabela2
 
 **Síntese geral**
 
-Os resultados sugerem que mudanças econômicas, emocionais e comportamentais durante a pandemia influenciaram os padrões de consumo de bebidas alcoólicas.
-
+Os resultados sugerem que mudanças econômicas, emocionais e comportamentais durante a pandemia apresentaram associação com os padrões de consumo de bebidas alcoólicas.
 :::
 
 # Fim {.section-background}
