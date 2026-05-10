@@ -85,6 +85,7 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 - Dados coletados em 2022 por pesquisadoras da pós-graduação em Nutrição da Universidade Federal Fluminense;
 - Aplicação de questionário online durante a pandemia de COVID-19;
+-----------------------------------------------------------------------
 - Amostra composta por 2310 participantes.
 :::
 
