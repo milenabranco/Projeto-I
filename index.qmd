@@ -466,7 +466,7 @@ tabela2
 
 ::: {.box-up}
 
-⬆️ **Categorias com maior associação ao aumento do consumo:**
+⬆️ **Categorias mais associadas ao aumento do consumo:**
 
 - Pessoas que trabalham;
 - Maior renda familiar;
@@ -498,7 +498,7 @@ tabela2
 
 ::: {.box-down}
 
-⬇️ **Maior associação com não consumo**
+⬇️ **Categorias mais associadas ao não consumo**
 
 - Dificuldade financeira;
 - Dificuldade de acesso a alimentos;
