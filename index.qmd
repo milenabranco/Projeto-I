@@ -47,7 +47,7 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 - O isolamento social impactou hábitos alimentares e padrões de consumo.
 
-- Alterações emocionais podem ter influenciado o consumo de bebidas alcoólicas.
+- Alterações emocionais, econômicas e comportamentais podem ter influenciado os padrões de consumo durante a pandemia.
 
 :::
 <br>
@@ -81,7 +81,7 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 ::: {.box-yellow}
 
-**Base do estudo:**
+<span style="color:#d4a017; font-weight:700;"> Base do estudo: </span>
 
 - Dados coletados em 2022 por pesquisadoras da pós-graduação em Nutrição da Universidade Federal Fluminense;
 - Aplicação de questionário online durante a pandemia de COVID-19;
@@ -94,7 +94,7 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 ::: {.box-blue}
 
-**Variável resposta:**
+<span style="color:#2563EB; font-weight:700;"> Variável resposta: </span> <br>
 
 **Bebidas_Alcoolicas**
 <span style="color:#8C96A0; font-size:0.72em;">
@@ -116,7 +116,7 @@ tabela2 <- readRDS("tabela_quanti.rds")
 
 ::: {.box-gray}
 
-**Variáveis qualitativas categóricas:**
+<span style="color:#6B7280; font-weight:700;"> Variáveis qualitativas categóricas: </span>
 
 - Sociodemográficas;
 - Econômicas;
@@ -131,8 +131,7 @@ Ex.: gênero, raça/cor, renda, escolaridade, tabagismo e isolamento social.
 <br>
 
 ::: {.box-yellow}
-
-**Variáveis quantitativas contínuas:**
+<span style="color:#d4a017; font-weight:700;"> Variáveis quantitativas: </span>
 
 - Idade;
 - Altura;
@@ -144,7 +143,7 @@ Ex.: gênero, raça/cor, renda, escolaridade, tabagismo e isolamento social.
 
 ::: {.box-blue}
 
-**Variável aberta:**
+<span style="color:#2563EB; font-weight:700;"> Variável aberta: </span>
 
 - sentimentos_pandemia.
 
@@ -240,6 +239,10 @@ Pressupostos avaliados: distribuição dos dados, homogeneidade das variâncias 
 
 <br><br>
 
+Independência das observações: assumida com base no delineamento do estudo.
+
+<br><br>
+
 Todas as análises foram realizadas considerando nível de significância de 5% (α = 0,05).
 
 </div>
@@ -258,8 +261,12 @@ tabela
 ```
 
 
-##
 
+## Magnitude das associações
+
+<span style="color:#8C96A0; font-size:0.82em;">
+As maiores magnitudes envolveram variáveis relacionadas ao contexto econômico e comportamental dos participantes.
+</span>
 ![](forest_categoricas.png)
 
 
@@ -276,13 +283,19 @@ tabela
 
 ::: {.box-yellow}
 
-**Maior associação com o aumento do consumo**
+<span style="color:#d4a017; font-weight:700;">
+⬆️ Perfil mais associado ao aumento do consumo
+</span>
 
 - Pessoas que trabalham;
 - Maior renda;
 - Maior escolaridade;
 - Fumantes;
-- Reduziram atividade física.
+- Redução da atividade física.
+
+<span style="color:#8C96A0; font-size:0.74em;">
+Perfil associado a maior inserção econômica e mudanças comportamentais durante a pandemia.
+</span>
 
 :::
 
@@ -296,11 +309,17 @@ tabela
 
 ::: {.box-gray}
 
-**Maior associação com não consumo**
+<span style="color:#6B7280; font-weight:700;">
+ ⬇️ Maior presença da categoria “não consumo”
+</span>
 
 - Dificuldade financeira;
 - Dificuldade de acesso a alimentos;
 - Pessoas que não trabalham.
+
+<span style="color:#8C96A0; font-size:0.74em;">
+Perfil relacionado a maior vulnerabilidade econômica durante a pandemia.
+</span>
 
 :::
 
@@ -355,6 +374,11 @@ tabela
 :::
 
 ::::
+<div style="margin-top:10px; color:#8C96A0; font-size:0.78em;">
+
+Os padrões observados sugerem influência do contexto socioeconômico e da rotina vivenciada durante a pandemia sobre os perfis de consumo.
+
+</div>
 
 #  Variáveis quantitativas: {.section-background}
 
@@ -424,67 +448,47 @@ tabela2
 
 ![](nuvens_estratificadas_4.png)
 
-
-
-##
-
-
-::: {.box-blue}
-
-**Sentimentos predominantes:**
-
-- Ansiedade;
-- Medo;
-- Estresse;
-- Insegurança;
-- Solidão.
-
-:::
-
 <br>
 
-
-
-::: {.box-yellow}
-
-**Interpretação:**
-
-- Predomínio de sentimentos negativos em todas as categorias de consumo;
-- Ansiedade, medo e estresse apareceram como emoções mais frequentes durante a pandemia.
-
-:::
+<div style="color:#8C96A0; font-size:0.82em; text-align:center;">
+Ansiedade, medo e estresse apareceram como sentimentos recorrentes entre as categorias de consumo.
+</div>
 
 
 
 # Conclusão {.section-background}
+## Principais achados: 
 
-## Achados gerais do estudo:
 
 :::: {.columns}
 
 ::: {.column width="48%"}
 
-::: {.box-up}
+::: {.box-blue}
 
-⬆️ **Categorias mais associadas ao aumento do consumo:**
+<span style="color:#2563EB; font-weight:700;">
+Aspectos emocionais
+</span>
 
-- Pessoas que trabalham;
-- Maior renda familiar;
-- Maior escolaridade;
-- Fumantes;
-- Redução da atividade física.
 
+- Ansiedade e estresse apresentaram comportamento semelhante entre os grupos;
+
+- O sentimento de medo apresentou leve variação visual entre as categorias.
 :::
 
 <br>
 
-::: {.box-blue}
+::: {.box-yellow}
 
-**Perfil observado**
+<span style="color:#d4a017; font-weight:700;">
+ Variáveis quantitativas
+</span>
 
-- Participantes mais jovens apresentaram maior associação com o aumento no consumo;
+- Idade apresentou a diferença mais perceptível entre os grupos;
 
-- A categoria “Não alterou” apresentou maior média de idade.
+- Participantes mais jovens apresentaram maior associação com aumento do consumo;
+
+- Peso e IMC não apresentaram diferenças relevantes.
 
 :::
 
@@ -496,26 +500,38 @@ tabela2
 
 ::: {.column width="48%"}
 
-::: {.box-down}
+::: {.box-gray}
 
-⬇️ **Categorias mais associadas ao não consumo**
+<span style="color:#6B7280; font-weight:700;">
+Principais associações socioeconômicas:
+</span>
 
+Diversas variáveis qualitativas apresentaram associação significativa, porém
+
+com magnitudes fracas a moderadas pelo V de Cramér.
+
+As associações mais relevantes envolveram:
+
+- Trabalho;
+- Renda familiar;
+- Escolaridade;
 - Dificuldade financeira;
-- Dificuldade de acesso a alimentos;
-- Pessoas que não trabalham.
+- Acesso a alimentos.
 
 :::
 
 <br>
 
-::: {.box-gray}
+::: {.box-yellow}
 
-➡️ **Variáveis sem associação significativa**
+<span style="color:#d4a017; font-weight:700;">
+⬆️ Perfis mais associados ao aumento do consumo
+</span>
 
-- Gênero;
-- Peso;
-- IMC;
-- Consulta com nutricionista.
+- Pessoas que trabalham;
+- Maior renda e escolaridade;
+- Fumantes;
+- Redução da atividade física.
 
 :::
 
@@ -525,11 +541,15 @@ tabela2
 
 <br>
 
-::: {.box-yellow}
 
-**Síntese geral**
+::: {.box-blue}
 
-Os resultados sugerem que mudanças econômicas, emocionais e comportamentais durante a pandemia apresentaram associação com os padrões de consumo de bebidas alcoólicas.
+<span style="color:#2563EB; font-weight:700;">
+➡️ Síntese geral
+</span>
+
+Os padrões observados sugerem associação entre o contexto socioeconômico, a rotina vivenciada durante a pandemia e os perfis de consumo.
 :::
+
 
 # Fim {.section-background}

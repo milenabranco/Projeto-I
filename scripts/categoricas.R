@@ -336,8 +336,8 @@ tabela_categorica <- tabela_quali1 %>%
   )
 tabela_categorica
 
-cor_pos <- "#1f3a5f"  # turquesa suave
-cor_neg <- "#7f1d1d"  # coral suave
+cor_neg <- "#1f3a5f"  # turquesa suave
+cor_pos <- "#7f1d1d"  # coral suave
 
 tabela_categorica_colorida <- tabela_categorica %>%
   
