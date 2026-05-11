@@ -193,7 +193,7 @@ Ex.: gênero, raça/cor, renda, escolaridade, tabagismo e isolamento social.
 - **openxlsx** → importação da base;
 - **dplyr** e **tidyverse** → manipulação dos dados;
 - **gtsummary** e **gt** → tabelas;
-- **rstatix**, **DescTools** e **car** → testes estatísticos;
+- **rstatix** e **DescTools** → testes estatísticos;
 - **ggplot2**, **ggpubr** e **qqplotr** → gráficos e diagnóstico;
 - **patchwork** → combinação de gráficos;
 - **ggwordcloud** e **tidytext** → análise textual.
