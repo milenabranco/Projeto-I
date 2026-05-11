@@ -396,13 +396,13 @@ tabela2
 
 :::: {.columns}
 
-::: {.column width="59%"}
+::: {.column width="62%"}
 
 ![](painel_violin_artigo.png)
 
 :::
 
-::: {.column width="41%"}
+::: {.column width="38%"}
 
 ::: {.box-yellow}
 
